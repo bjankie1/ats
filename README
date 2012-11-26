@@ -1,4 +1,15 @@
-This is your new Play 2.0 application
+Advanced Trading System
 =====================================
 
-This file will be packaged with your application, when using `play dist`.
+Scala based trading system. The system aims to evaluate calculations based on downstream data (Ticks) producing decisions based
+on aggregated data.
+
+Basic flow:
+# Tick
+# Candles aggregation
+## If intra-candle tick -> Update metrics with the tick
+## Else update metrics with new candle
+# Evaluate decisions rules based on current tick and metrics
+# Push decisions for further evaluation (accounting)
+# Estimate VaR
+# Execute trading decision -> E*Trade API
