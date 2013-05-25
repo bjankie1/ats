@@ -4,15 +4,16 @@ import PlayProject._
 
 object ApplicationBuild extends Build {
 
-    val appName         = "ats"
-    val appVersion      = "1.0-SNAPSHOT"
+  val appName = "ats"
+  val appVersion = "1.0-SNAPSHOT"
 
-    val appDependencies = Seq(
-      // Add your project dependencies here,
-    )
+  val appDependencies = Seq(
+//    "org.scala-tools.testing" %% "specs" % "1.6.9" % "test"
+      )
 
-    val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).settings(
-      // Add your own project settings here      
-    )
+  val main = play.Project(appName, appVersion, appDependencies).settings(
+      // Add your own project settings here
+      testOptions in Test := Nil
+  )
 
 }
