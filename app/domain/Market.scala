@@ -10,6 +10,8 @@ import org.joda.time.LocalTime
 case class Market( id: String, name: String, region: Region.Region)
 
 
+
+
 /**
  * Geographical region
  */

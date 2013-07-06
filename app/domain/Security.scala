@@ -1,7 +1,6 @@
 package domain
 
-import org.joda.time.DateTime
-import org.joda.time.Interval
+import org.joda.time.{LocalDateTime, Period, DateTime, Interval}
 
 /**
  * Security traded on SE
@@ -16,4 +15,5 @@ case class Tick(price: BigDecimal, volumne: Int, when: DateTime, security: Secur
 /**
  * Aggregation of candles
  */
-case class Candle(open: BigDecimal, close: BigDecimal, low: BigDecimal, high: BigDecimal, interval: Int)
+case class Candle(open: BigDecimal, close: BigDecimal, low: BigDecimal, high: BigDecimal, volume: BigDecimal,
+                  security: Security, start: LocalDateTime, interval: Period)

@@ -6,7 +6,7 @@ import domain.Tick
 /**
  * Support line based on highest/lowest observation
  */
-class Pivot extends Metric {
+class Pivot extends CandleStoreAware {
   
   def update(tick: Tick, candles: Stream[Candle]) = ???
   
